@@ -15,7 +15,7 @@ export const useCurrentWeather = () => {
     setLon(longitude);
   };
 
-  console.log(lat, lon);
+  // console.log(lat, lon);
 
   useEffect(() => {
     navigator.geolocation.getCurrentPosition(location);

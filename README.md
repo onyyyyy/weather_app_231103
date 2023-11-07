@@ -14,3 +14,5 @@
 
 =>배포를 위해 압축시키는 과정 build
 es6 => 구버전 변경
+
+"homepage": "https://아이디명.github.io/레포지토리명"

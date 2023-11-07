@@ -73,7 +73,7 @@ const Con = styled.div`
 
 export const Home = () => {
   const { lat, lon } = useCurrentWeather();
-  console.log(lat, lon);
+  // console.log(lat, lon);
 
   const { data, isLoading } = useQuery({
     queryKey: ["weather", lat, lon],
@@ -84,7 +84,7 @@ export const Home = () => {
   // =>비동기 통신 사용 시 상태 관리하는 hook
   // =>useQuery를 사용할 떈 반드시 QuertClientProvider를 설정해줘야 함
   // console.log(isLoading);
-  console.log(data);
+  // console.log(data);
 
   return (
     <>
