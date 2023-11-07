@@ -1,6 +1,8 @@
 import { useQuery } from "@tanstack/react-query";
 import { getWeather } from "../api";
 import styled from "styled-components";
+import { useCurrentWeather } from "../lib/useCurrentWeather";
+import { Loading } from "../components/Loding";
 
 const Wrap = styled.div`
   max-width: 400px;
@@ -70,8 +72,11 @@ const Con = styled.div`
 `;
 
 export const Home = () => {
+  const { lat, lon } = useCurrentWeather();
+  console.log(lat, lon);
+
   const { data, isLoading } = useQuery({
-    queryKey: ["weather"],
+    queryKey: ["weather", lat, lon],
     queryFn: getWeather,
   });
 
@@ -84,7 +89,7 @@ export const Home = () => {
   return (
     <>
       {isLoading ? (
-        "loding"
+        <Loading />
       ) : (
         <Wrap>
           <Location>{data?.name}</Location>

@@ -5,8 +5,12 @@
 ## TODO
 
 - [x] 경로 설정
-- [] api 연결 설정
-- [] axios, useQuery
-- [] UI 제작, helmet 설정
-- [] 현재 위치 얻어오기
-- [] 배포(deploy)
+- [x] api 연결 설정
+- [x] axios, useQuery
+- [x] UI 제작, helmet 설정
+- [x] 로딩UI
+- [x] 현재 위치 얻어오기
+- [x] 배포(deploy)
+
+=>배포를 위해 압축시키는 과정 build
+es6 => 구버전 변경
